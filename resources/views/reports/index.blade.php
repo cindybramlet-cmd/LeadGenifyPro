@@ -67,7 +67,7 @@
     {{-- Summary metrics --}}
     <div class="grid grid-cols-2 xl:grid-cols-4 gap-4">
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-sm">
-            <p class="text-xs text-slate-500 dark:text-slate-400">Emails Sent</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Total Emails Sent</p>
             <p class="mt-1 text-3xl font-bold text-slate-900 dark:text-white">{{ number_format($metrics['sent']) }}</p>
         </div>
         <div class="rounded-2xl border border-emerald-200 bg-emerald-50 dark:bg-emerald-950/30 p-5 shadow-sm">
@@ -88,7 +88,7 @@
 
     @if($metrics['sent'] === 0)
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 text-center text-slate-500 dark:text-slate-400">
-            No sent emails found for the selected filters.
+            No data available for the selected filters.
         </div>
     @endif
 

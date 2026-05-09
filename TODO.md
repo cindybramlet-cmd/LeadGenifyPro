@@ -1,7 +1,6 @@
-# TODO - Campaign Group Select Issue
-
-- [x] Verify DB/account mapping for groups and contacts
-- [x] Identify root cause for empty groups list in campaign create
-- [x] Implement targeted fix (controller/view/data handling as needed)
-- [x] Add empty-state UX message for no groups
-- [x] Validate behavior through critical-path checks
+- [x] Find all branding references ("Novelio Technologies" and related labels) across project files
+- [x] Review matched files and identify exact text/logo replacements
+- [x] Update branding text to "LeadGenify Pro" in Blade views/config/docs
+- [x] Update README branding content for GitHub
+- [x] Verify old branding strings are removed from edited files
+- [x] Check git status and prepare commit-ready changes

@@ -16,8 +16,15 @@ class UserManagementController extends Controller
      */
     public function index(): View
     {
-        $accountId = $this->currentAccountId();
-        $users = User::where('account_id', $accountId)->orderBy('id', 'desc')->paginate(20);
+        $user = auth()->user();
+        
+        // For admin users, show all users; otherwise scope to account
+        if ($user->role === 'admin') {
+            $users = User::orderBy('id', 'desc')->paginate(20);
+        } else {
+            $accountId = $this->currentAccountId();
+            $users = User::where('account_id', $accountId)->orderBy('id', 'desc')->paginate(20);
+        }
 
         return view('users.index', compact('users'));
     }
